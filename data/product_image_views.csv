@@ -1,0 +1,210 @@
+id,action,restaurant_id,restaurant_name,category_id,category_name,product_id,product_name,mac_address,user_id,date_insert
+1,OPEN,4778,"Da WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81992,Secondi,618376,Milanese,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-07-14 14:25:07
+2,CLOSE,4778,"Da WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81992,Secondi,618376,Milanese,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-07-14 14:25:10
+3,OPEN,4778,"Da WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-07-14 14:25:36
+4,CLOSE,4778,"Da WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-07-14 14:25:37
+5,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81987,Primi,618360,Trofie al pesto,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:11
+6,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81987,Primi,618360,Trofie al pesto,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:12
+7,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:25
+8,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:26
+9,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625521,Panna Cotta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:27
+10,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625521,Panna Cotta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:31
+11,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625512,Birra alla Spina,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:45
+12,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625512,Birra alla Spina,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:47
+13,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625489,Succhi di Frutta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:49
+14,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625489,Succhi di Frutta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:20:49
+15,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625489,Succhi di Frutta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:09
+16,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625489,Succhi di Frutta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:10
+17,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:39
+18,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:39
+19,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:40
+20,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:44
+21,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660380,Focaccia cotto e formaggio,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:50
+22,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660380,Focaccia cotto e formaggio,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:21:51
+23,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15743,Dolci,137104,Panna cotta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:22:30
+24,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15743,Dolci,137104,Panna cotta,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:22:30
+25,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15743,Dolci,625895,Cheesecake ai frutti di bosco,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:22:44
+26,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15743,Dolci,625895,Cheesecake ai frutti di bosco,8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:22:45
+27,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:22:54
+28,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",8db22888-5775-4c60-abab-20aa0f599443,,2023-07-18 06:22:55
+29,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625521,Panna Cotta,d7e13482-d455-40a5-8bc5-36158ff66e08,,2023-07-18 20:20:09
+30,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625521,Panna Cotta,d7e13482-d455-40a5-8bc5-36158ff66e08,,2023-07-18 20:20:10
+31,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",d7e13482-d455-40a5-8bc5-36158ff66e08,,2023-07-18 20:21:17
+32,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",d7e13482-d455-40a5-8bc5-36158ff66e08,,2023-07-18 20:21:20
+33,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81987,Primi,618373,Lasagne,c6e20f7d-8754-4d54-a16c-57c16b72c9a6,,2023-07-20 08:51:39
+34,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81987,Primi,618373,Lasagne,c6e20f7d-8754-4d54-a16c-57c16b72c9a6,,2023-07-20 08:51:40
+35,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625521,Panna Cotta,202f499e-6e3c-46ec-9640-d3049504a639,,2023-07-20 10:56:16
+36,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625521,Panna Cotta,202f499e-6e3c-46ec-9640-d3049504a639,,2023-07-20 10:56:17
+37,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,202f499e-6e3c-46ec-9640-d3049504a639,,2023-07-20 10:56:19
+38,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,202f499e-6e3c-46ec-9640-d3049504a639,,2023-07-20 10:56:21
+39,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-07-20 10:56:25
+40,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-07-20 12:36:41
+41,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",82265,Dolci,625520,Sorbetto al Limone,5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-07-20 12:36:44
+42,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-07-20 12:50:28
+43,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660381,"Radicchio, speck e formaggio",a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-07-20 12:50:30
+44,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15744,Bibite,625861,Succhi di frutta,5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-07-20 14:03:00
+45,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15744,Bibite,625861,Succhi di frutta,5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-07-20 14:03:06
+46,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625493,Acqua in Vetro 0.75L,fb37b87b-5b2f-42f9-a6a3-6336a45940aa,,2023-07-20 14:28:28
+47,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625493,Acqua in Vetro 0.75L,fb37b87b-5b2f-42f9-a6a3-6336a45940aa,,2023-07-20 14:28:30
+48,OPEN,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625493,Acqua in Vetro 0.75L,fb37b87b-5b2f-42f9-a6a3-6336a45940aa,,2023-07-20 14:29:34
+49,CLOSE,4778,"WaitHero demo [Chuo City, Nihonbashi, 1, Tokyo]",81994,Bevande,625493,Acqua in Vetro 0.75L,fb37b87b-5b2f-42f9-a6a3-6336a45940aa,,2023-07-20 14:29:35
+50,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82261,Vini,625505,Prosecco DOC Brut Millesimato,9548f6c2-3023-49be-ba3b-10c6ee79e5a5,,2023-07-25 08:50:03
+51,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82261,Vini,625505,Prosecco DOC Brut Millesimato,9548f6c2-3023-49be-ba3b-10c6ee79e5a5,,2023-07-25 09:08:54
+52,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,618379,Hamburger,3a7af5b8-0181-4dcf-98dc-f9bf40c09a51,,2023-07-28 14:54:11
+53,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,618379,Hamburger,3a7af5b8-0181-4dcf-98dc-f9bf40c09a51,,2023-07-28 14:54:14
+54,OPEN,4907,"Caffè Bellini [Via montevideo, 20 - 10134 Torino, Torino]",86241,Caffetteria Costadoro,660968,Caffe shekerato,5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-07-31 11:55:21
+55,CLOSE,4907,"Caffè Bellini [Via montevideo, 20 - 10134 Torino, Torino]",86241,Caffetteria Costadoro,660968,Caffe shekerato,5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-07-31 11:55:22
+56,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15751,Bollicine,137132,Valdobbiadene Prosecco Superiore Extra Dry DOCG,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-08-25 08:06:28
+57,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",15751,Bollicine,137132,Valdobbiadene Prosecco Superiore Extra Dry DOCG,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-08-25 08:06:30
+58,OPEN,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660380,Lasagne al pesto di basilico,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-08-25 08:06:44
+59,CLOSE,567,"WaitHero Cafè demo [R. Boa Vista, 38, Sau Paulo]",86157,Scelti per te!,660380,Lasagne al pesto di basilico,a8d42e50-fe81-4641-a652-885a0bfcc3ce,,2023-08-25 08:06:50
+60,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,f1f03db0-68a9-477f-8bf9-1d975c9c9709,,2023-08-28 15:43:43
+61,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,f1f03db0-68a9-477f-8bf9-1d975c9c9709,,2023-08-28 15:43:49
+62,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81994,Bevande,625493,Acqua in Vetro 0.75L,6fc21761-9aa8-4e6e-b3dc-8eda558a9feb,,2023-09-11 18:26:04
+63,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81994,Bevande,625493,Acqua in Vetro 0.75L,6fc21761-9aa8-4e6e-b3dc-8eda558a9feb,,2023-09-11 18:26:09
+64,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618372,Pasta allo Scoglio,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-09-21 08:01:46
+65,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618372,Pasta allo Scoglio,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-09-21 08:01:57
+66,OPEN,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662281,Birra Cala Delirio (Rossa),5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-09-21 12:18:27
+67,CLOSE,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662281,Birra Cala Delirio (Rossa),5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-09-21 12:18:28
+68,OPEN,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662279,Birra Cala Passione (Lager),5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-09-21 12:35:35
+69,CLOSE,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662279,Birra Cala Passione (Lager),5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-09-21 12:35:36
+70,OPEN,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662279,Birra Cala Passione (Lager),5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-09-22 07:27:37
+71,CLOSE,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662279,Birra Cala Passione (Lager),5f166e79-a33c-47f2-aa30-a7f2e121bfa8,,2023-09-22 07:27:40
+72,OPEN,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662279,Birra Cala Passione (Lager),be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-09-22 10:01:55
+73,CLOSE,4914,"Caffetteria Manduca [Via dei gergofili, 91/93 - Roma, Roma]",86518,Birre Artigianali in bottiglia 33cl,662279,Birra Cala Passione (Lager),be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-09-22 10:01:58
+74,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,661068,Mix di focacce gourmet,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-10-05 16:29:05
+75,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,661068,Mix di focacce gourmet,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-10-05 16:29:26
+76,OPEN,1012,"FBM Birreria Gourmet [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-10-05 16:40:11
+77,CLOSE,1012,"FBM Birreria Gourmet [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2023-10-05 16:40:21
+78,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,42a634f1-538a-44ef-be86-8142dbe81d70,,2023-10-13 08:24:35
+79,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,42a634f1-538a-44ef-be86-8142dbe81d70,,2023-10-13 08:24:39
+80,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:38:57
+81,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:39:07
+82,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:39:10
+83,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:39:31
+84,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272550,Vegetariano,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:41:19
+85,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272550,Vegetariano,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:41:27
+86,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:41:48
+87,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,6fc5d069-b5bb-4dc8-b793-5ed219346295,,2023-10-13 18:41:53
+88,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,9bd03cfb-ee21-476a-bbe1-75da5f3685a7,,2023-10-15 17:54:53
+89,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,9bd03cfb-ee21-476a-bbe1-75da5f3685a7,,2023-10-15 17:54:56
+90,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,9bd03cfb-ee21-476a-bbe1-75da5f3685a7,,2023-10-15 17:55:06
+91,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,9bd03cfb-ee21-476a-bbe1-75da5f3685a7,,2023-10-15 17:55:12
+92,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,a9d21fdd-9248-4c1a-8315-222c8f03ac34,,2023-10-19 18:17:56
+93,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,a9d21fdd-9248-4c1a-8315-222c8f03ac34,,2023-10-19 18:18:00
+94,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,a9d21fdd-9248-4c1a-8315-222c8f03ac34,,2023-10-19 18:19:51
+95,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,a9d21fdd-9248-4c1a-8315-222c8f03ac34,,2023-10-19 19:06:52
+96,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82261,Vini,625511,Langhe Nebbiolo DOC Rosso 2018,4d5ae3f9-5ba1-4adf-b8bb-35966652b206,,2023-10-24 21:14:10
+97,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,232afb31-6be0-4fd9-b5e2-51e179cff118,,2023-10-30 12:28:27
+98,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,f52b5285-c139-4c1f-b8e3-94c1e6420d96,,2023-11-06 14:13:09
+99,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,f52b5285-c139-4c1f-b8e3-94c1e6420d96,,2023-11-06 14:13:13
+100,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-11-08 19:25:35
+101,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-11-08 19:25:37
+102,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,184aa98a-b5d9-4479-b610-aac4fb2db923,,2023-11-08 21:40:40
+103,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,184aa98a-b5d9-4479-b610-aac4fb2db923,,2023-11-08 21:40:44
+104,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,7830ce82-ee88-4b10-94a0-fd8245fbd91d,,2023-11-10 18:08:03
+105,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28477,Da condividere,272534,Tagliere Misto salumi e formaggi,7830ce82-ee88-4b10-94a0-fd8245fbd91d,,2023-11-10 18:08:07
+106,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,ff7a9c5d-8e36-449c-854d-9819dd5d3f71,,2023-11-18 19:48:00
+107,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,ff7a9c5d-8e36-449c-854d-9819dd5d3f71,,2023-11-18 19:48:04
+108,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,42b8a822-6ef8-4e9b-8dae-494c6c1e461d,,2023-11-20 09:10:51
+109,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,42b8a822-6ef8-4e9b-8dae-494c6c1e461d,,2023-11-20 09:10:53
+110,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:35:33
+111,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:35:39
+112,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:35:51
+113,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:35:54
+114,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:36:20
+115,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:36:38
+116,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:36:50
+117,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:36:52
+118,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:36:56
+119,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,41a128cd-757a-4c44-a0b2-9ac117373aab,,2023-11-22 18:37:00
+120,OPEN,4923,"Bar Costarica [Corso Traiano, 2 - 10135, Torino ]",87391,Caffetteria,668902,Bicerin,c22b0358-c460-4892-9b61-7231f60a26ea,,2023-12-01 10:20:08
+121,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272550,Vegetariano,9bd3a096-fc05-4e4a-82a4-bd4e6ba2928b,,2023-12-01 19:38:25
+122,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272550,Vegetariano,9bd3a096-fc05-4e4a-82a4-bd4e6ba2928b,,2023-12-01 19:43:22
+123,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,2d196ed0-1e2a-4746-a9d4-8e27f158a466,,2023-12-02 19:23:44
+124,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,5ea1c443-049b-4747-bb9d-cf3626073f09,,2023-12-05 15:40:16
+125,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,5ea1c443-049b-4747-bb9d-cf3626073f09,,2023-12-05 15:40:35
+126,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,15a64738-5c85-411d-b6b6-d63bead4b980,,2023-12-05 18:42:27
+127,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,15a64738-5c85-411d-b6b6-d63bead4b980,,2023-12-05 18:42:30
+128,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,15a64738-5c85-411d-b6b6-d63bead4b980,,2023-12-05 18:43:02
+129,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,15a64738-5c85-411d-b6b6-d63bead4b980,,2023-12-05 18:43:03
+130,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,618376,Milanese,7341545b-aece-4dd2-b243-a0c49fcfbe57,,2023-12-15 09:26:44
+131,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,618376,Milanese,7341545b-aece-4dd2-b243-a0c49fcfbe57,,2023-12-15 09:26:45
+132,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:35
+133,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:37
+134,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625482,Insalata Russa,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:39
+135,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625482,Insalata Russa,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:41
+136,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625483,Bruschetta ,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:43
+137,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625483,Bruschetta ,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:44
+138,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,618379,Hamburger,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:49
+139,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,618379,Hamburger,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:51
+140,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,625484,Fritto di Pesce,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:53
+141,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,625484,Fritto di Pesce,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 09:56:54
+142,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:23:48
+143,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:23:53
+144,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:23:55
+145,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:23:59
+146,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:24:00
+147,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:24:08
+148,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:24:27
+149,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:24:30
+150,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,625484,Fritto di Pesce,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 10:24:32
+151,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:24:43
+152,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-15 10:24:46
+153,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81992,Secondi,625484,Fritto di Pesce,05d616d9-e777-44e2-9238-f1a7359bdb13,,2023-12-15 10:36:35
+154,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,ba9ab0bc-30dc-4a1e-a8ab-ade4d7708e29,,2023-12-15 19:42:56
+155,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,ba9ab0bc-30dc-4a1e-a8ab-ade4d7708e29,,2023-12-15 19:44:39
+156,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82261,Vini,625505,Prosecco DOC Brut Millesimato,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-26 21:17:26
+157,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82261,Vini,625505,Prosecco DOC Brut Millesimato,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-26 21:17:28
+158,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,5c4e5e36-aa2f-4bba-9c1f-a745cda24ccf,,2023-12-27 19:12:59
+159,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,5c4e5e36-aa2f-4bba-9c1f-a745cda24ccf,,2023-12-27 19:13:13
+160,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-28 09:49:38
+161,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618360,Trofie al pesto,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-28 09:49:39
+162,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81994,Bevande,660958,Fanta 33 cl,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-28 14:14:45
+163,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81994,Bevande,660958,Fanta 33 cl,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-28 14:14:48
+164,OPEN,567,"WaitHero Cafè demo [Piazza vittorio 1, Torino ]",15743,Dolci,137103,Tiramisù,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-28 14:18:20
+165,CLOSE,567,"WaitHero Cafè demo [Piazza vittorio 1, Torino ]",15743,Dolci,137103,Tiramisù,49f609e1-1907-492d-8da6-e4056db16424,,2023-12-28 14:18:21
+166,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,047ba414-d84e-4aa4-9138-b6c75c179608,,2023-12-28 19:53:31
+167,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,047ba414-d84e-4aa4-9138-b6c75c179608,,2023-12-28 19:54:09
+168,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,14542d9a-7086-47d2-8c7d-18579a4ae0a0,,2024-01-05 15:39:26
+169,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",82254,Antipasti,625481,Vitello Tonnato,14542d9a-7086-47d2-8c7d-18579a4ae0a0,,2024-01-05 15:39:29
+170,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,ac05412d-e69d-4fc1-b903-1b3e24d7713c,,2024-01-08 18:40:53
+171,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,ac05412d-e69d-4fc1-b903-1b3e24d7713c,,2024-01-08 18:40:57
+172,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,c0e8e62d-87e9-4396-8c65-d6afdffed36b,,2024-01-12 20:58:11
+173,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,c0e8e62d-87e9-4396-8c65-d6afdffed36b,,2024-01-12 20:58:18
+174,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,460a19b4-2b8a-4a6f-83f0-325ffc57c2d9,,2024-01-13 19:38:39
+175,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,460a19b4-2b8a-4a6f-83f0-325ffc57c2d9,,2024-01-13 19:38:48
+176,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,469e669b-3785-4035-b035-f15370218ea7,,2024-01-13 19:59:34
+177,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,469e669b-3785-4035-b035-f15370218ea7,,2024-01-13 19:59:44
+178,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,71728e05-46c8-4650-889f-f5674587e357,,2024-01-13 20:22:10
+179,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,71728e05-46c8-4650-889f-f5674587e357,,2024-01-13 20:22:25
+180,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,3d47470b-f567-4bbd-b65b-52ad464bda7f,,2024-01-20 19:17:45
+181,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,3d47470b-f567-4bbd-b65b-52ad464bda7f,,2024-01-20 19:17:50
+182,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,3d47470b-f567-4bbd-b65b-52ad464bda7f,,2024-01-20 19:18:17
+183,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,3d47470b-f567-4bbd-b65b-52ad464bda7f,,2024-01-20 19:18:18
+184,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,646852,Brian,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:50:59
+185,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,646852,Brian,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:51:03
+186,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,646852,Brian,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:51:04
+187,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,646852,Brian,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:51:16
+188,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,661773,The Fall,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:52:14
+189,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,661773,The Fall,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:52:20
+190,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,661770,Seta,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:52:40
+191,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,661770,Seta,f5479e43-dca8-4ac4-9702-297a324b8356,,2024-01-20 22:52:47
+192,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,98500f07-28a4-467b-8ec3-b9fd7b3b4aa5,,2024-01-26 19:37:25
+193,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,98500f07-28a4-467b-8ec3-b9fd7b3b4aa5,,2024-01-26 19:37:59
+194,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,661770,Seta,0cc893a5-47c0-461d-8ce2-0ad63d748ccc,,2024-01-26 22:07:03
+195,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28481,I Cocktail Metzger,661770,Seta,0cc893a5-47c0-461d-8ce2-0ad63d748ccc,,2024-01-26 22:07:05
+196,OPEN,4884,"Pucceria Pontina [Via Giosuè Carducci, 15, Latina]",85094,Pucce con prosciutto crudo,648489,Pasubio,df5d71cc-012f-4df7-881a-570cb2df1b5b,,2024-02-01 08:19:37
+197,CLOSE,4884,"Pucceria Pontina [Via Giosuè Carducci, 15, Latina]",85094,Pucce con prosciutto crudo,648489,Pasubio,df5d71cc-012f-4df7-881a-570cb2df1b5b,,2024-02-01 08:19:48
+198,OPEN,4884,"Pucceria Pontina [Via Giosuè Carducci, 15, Latina]",85094,Pucce con prosciutto crudo,648490,Ardea,df5d71cc-012f-4df7-881a-570cb2df1b5b,,2024-02-01 08:19:54
+199,CLOSE,4884,"Pucceria Pontina [Via Giosuè Carducci, 15, Latina]",85094,Pucce con prosciutto crudo,648490,Ardea,df5d71cc-012f-4df7-881a-570cb2df1b5b,,2024-02-01 08:19:57
+200,OPEN,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618372,Pasta allo Scoglio,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2024-02-14 13:05:53
+201,CLOSE,4778,"WaitHero demo [Times Square, 1, New York]",81987,Primi,618372,Pasta allo Scoglio,be73d9ab-9bb6-4964-8984-076fb8b8fced,,2024-02-14 13:06:11
+202,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:10:10
+203,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272538,Classico,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:10:13
+204,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:10:17
+205,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:10:20
+206,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:10:49
+207,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272541,Cheeseburger,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:10:50
+208,OPEN,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272550,Vegetariano,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:11:19
+209,CLOSE,1012,"FBM Fabbrica di Birra Metzger [Via Catania, 45, Torino]",28478,Hamburger,272550,Vegetariano,b1e96df0-c470-4c68-bdeb-61365288754e,,2024-02-14 19:11:23
