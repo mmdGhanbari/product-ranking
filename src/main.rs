@@ -142,7 +142,7 @@ fn main() {
             // Calculate the ranking
             let rank = 5 * image_view.num_seconds()
                 + 1 * product_view.num_seconds()
-                + (0.1 * (category_view.num_milliseconds()) as f32) as i64;
+                + (0.1 * (category_view.num_seconds()) as f32) as i64;
 
             let rank = rank as usize;
 
