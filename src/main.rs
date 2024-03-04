@@ -1,11 +1,16 @@
 use anyhow::Result;
 use chrono::{DateTime, Duration, NaiveDateTime, Utc};
 use csv::{ReaderBuilder, WriterBuilder};
-use std::{collections::HashMap, fs::File};
+use std::{
+    collections::{HashMap, HashSet},
+    fs::File,
+};
 
 use model::{
     Ranking, SerializableRanking, User, ViewAction, ViewIdentifier, ViewRecord, ViewScope,
 };
+
+use crate::model::ProductIngredient;
 
 mod model;
 mod sample;
@@ -29,7 +34,7 @@ fn update_user_view(views: &mut UserViews, user: &User, scope: &ViewScope, durat
     *view_entry += duration;
 }
 
-fn process_csv(file_path: &str) -> Result<HashMap<User, HashMap<ViewScope, Duration>>> {
+fn process_view_csv(file_path: &str) -> Result<HashMap<User, HashMap<ViewScope, Duration>>> {
     // We keep the time of last OPEN action for each (user, scope)
     let mut open_times: HashMap<ViewIdentifier, DateTime<Utc>> = HashMap::new();
     let mut views: UserViews = HashMap::new();
@@ -77,6 +82,25 @@ fn process_csv(file_path: &str) -> Result<HashMap<User, HashMap<ViewScope, Durat
     Ok(views)
 }
 
+// Read the ingredients of each product
+fn read_ingredients(file_path: &str) -> Result<HashMap<usize, HashSet<usize>>> {
+    // A map from product_id to HashSet<ingredient_id>
+    // We use HashSet to make sure that each ingredient appears only once in each product
+    let mut ingredients = HashMap::new();
+
+    // Open the csv file and setup the reader
+    let file = File::open(file_path)?;
+    let mut csv_reader = ReaderBuilder::new().has_headers(true).from_reader(file);
+
+    for record in csv_reader.deserialize::<ProductIngredient>() {
+        let record = record?;
+        let product_entry: &mut HashSet<usize> = ingredients.entry(record.product_id).or_default();
+        product_entry.insert(record.ingredient_id);
+    }
+
+    Ok(ingredients)
+}
+
 // Write calculated rankings into the output file
 fn write_rankings(file_path: &str, rankings: &[Ranking]) -> Result<()> {
     let file = File::create(file_path)?;
@@ -98,22 +122,26 @@ fn main() {
 
     // For each csv file, we spawn a new thread
     let product_proc_handle = std::thread::spawn(|| {
-        process_csv("data/product_views.csv").expect("to process product csv")
+        process_view_csv("data/product_views.csv").expect("to process product csv")
     });
     let product_image_proc_handle = std::thread::spawn(|| {
-        process_csv("data/product_image_views.csv").expect("to process product_image csv")
+        process_view_csv("data/product_image_views.csv").expect("to process product_image csv")
     });
     let category_proc_handle = std::thread::spawn(|| {
-        process_csv("data/category_views.csv").expect("to process category csv")
+        process_view_csv("data/category_views.csv").expect("to process category csv")
+    });
+    let ingredients_proc_handle = std::thread::spawn(|| {
+        read_ingredients("data/product_ingredient.csv").expect("to read ingredients csv")
     });
 
     // Wait for the threads to finish calculating...
-    let (product_views, product_image_views, category_views) = (
+    let (product_views, product_image_views, category_views, ingredients) = (
         product_proc_handle.join().expect("to process products"),
         product_image_proc_handle
             .join()
             .expect("to process product images"),
         category_proc_handle.join().expect("to process categories"),
+        ingredients_proc_handle.join().expect("to read ingredients"),
     );
 
     let mut rankings: Vec<Ranking> = Vec::with_capacity(100_000);
@@ -124,8 +152,27 @@ fn main() {
         let image_views = product_image_views.get(user).unwrap_or(&empty_map);
         let category_views = category_views.get(user).unwrap_or(&empty_map);
 
+        // Calculate ingredients' views for this user
+        let mut ingredients_views: HashMap<usize, Duration> = HashMap::new();
+
         // Iterate on the products views of that user...
         for (product, &product_view) in product_views.iter() {
+            let Some(product_ingredients) =
+                ingredients.get(&product.product_id.expect("to have product_id"))
+            else {
+                continue;
+            };
+
+            product_ingredients.iter().for_each(|ingredient_id| {
+                let ingredient_entry = ingredients_views.entry(*ingredient_id).or_default();
+                *ingredient_entry += product_view;
+            });
+        }
+
+        // Iterate on the products views of that user...
+        for (product, &product_view) in product_views.iter() {
+            let product_id = product.product_id.expect("to have product_id");
+
             // Get product_image view duration
             let image_view = image_views.get(product).cloned().unwrap_or_default();
 
@@ -139,17 +186,38 @@ fn main() {
                 .cloned()
                 .unwrap_or_default();
 
+            // Calculate the ranking coming from the ingredients
+            let ingredient_ranking: i64 = if let Some(product_ingredients) =
+                ingredients.get(&product_id)
+            {
+                let ingredients_total_millis: f32 = product_ingredients
+                    .iter()
+                    .map(|ingredient_id| {
+                        ingredients_views
+                            .get(ingredient_id)
+                            .cloned()
+                            .unwrap_or_default()
+                            .num_milliseconds() as f32
+                    })
+                    .sum();
+
+                // Total seconds of ingredients views / number of ingredients
+                ((ingredients_total_millis / 1000f32) / (product_ingredients.len() as f32)) as i64
+            } else {
+                // If there's no ingredient for this product, ingredient ranking will be 0
+                0
+            };
+
             // Calculate the ranking
             let rank = 5 * image_view.num_seconds()
                 + 1 * product_view.num_seconds()
-                + (0.1 * (category_view.num_seconds()) as f32) as i64;
-
-            let rank = rank as usize;
+                + (0.1 * (category_view.num_seconds()) as f32) as i64
+                + ingredient_ranking;
 
             rankings.push(Ranking {
                 user: user.clone(),
-                product_id: product.product_id.clone().expect("to have product_id"),
-                rank,
+                product_id,
+                rank: rank as usize,
             })
         }
     }

@@ -39,6 +39,14 @@ pub struct ViewRecord {
 #[derive(Clone, Hash, PartialEq, Eq)]
 pub struct ViewIdentifier(pub User, pub ViewScope);
 
+#[derive(Clone, Debug, Deserialize)]
+pub struct ProductIngredient {
+    #[serde(alias = "id_product_restaurant")]
+    pub product_id: usize,
+    #[serde(alias = "id_ingredient")]
+    pub ingredient_id: usize,
+}
+
 #[derive(Debug)]
 pub struct Ranking {
     pub user: User,
