@@ -1,16 +1,17 @@
-use anyhow::Result;
-use chrono::{DateTime, Duration, NaiveDateTime, Utc};
-use csv::{ReaderBuilder, WriterBuilder};
 use std::{
     collections::{HashMap, HashSet},
     fs::File,
 };
 
+use anyhow::Result;
+use chrono::{DateTime, Duration, NaiveDateTime, Utc};
+use csv::{ReaderBuilder, WriterBuilder};
+
 use model::{
     Ranking, SerializableRanking, User, ViewAction, ViewIdentifier, ViewRecord, ViewScope,
 };
 
-use crate::model::ProductIngredient;
+use crate::model::{ProductDetails, ProductIngredient, ProductMapping, ProductVariant};
 
 mod model;
 mod sample;
@@ -39,7 +40,7 @@ fn process_view_csv(file_path: &str) -> Result<HashMap<User, HashMap<ViewScope, 
     let mut open_times: HashMap<ViewIdentifier, DateTime<Utc>> = HashMap::new();
     let mut views: UserViews = HashMap::new();
 
-    // Open the csv file and setup the reader
+    // Open the csv file and set up the reader
     let file = File::open(file_path)?;
     let mut csv_reader = ReaderBuilder::new().has_headers(true).from_reader(file);
 
@@ -88,7 +89,7 @@ fn read_ingredients(file_path: &str) -> Result<HashMap<usize, HashSet<usize>>> {
     // We use HashSet to make sure that each ingredient appears only once in each product
     let mut ingredients = HashMap::new();
 
-    // Open the csv file and setup the reader
+    // Open the csv file and set up the reader
     let file = File::open(file_path)?;
     let mut csv_reader = ReaderBuilder::new().has_headers(true).from_reader(file);
 
@@ -99,6 +100,57 @@ fn read_ingredients(file_path: &str) -> Result<HashMap<usize, HashSet<usize>>> {
     }
 
     Ok(ingredients)
+}
+
+fn read_product_mappings(file_path: &str) -> Result<HashMap<usize, usize>> {
+    let mut mapping = HashMap::new();
+
+    // Open the csv file and set up the reader
+    let file = File::open(file_path)?;
+    let mut csv_reader = ReaderBuilder::new().has_headers(true).from_reader(file);
+
+    for record in csv_reader.deserialize::<ProductMapping>() {
+        let record = record?;
+        if let Some(master_product) = record.master_product {
+            mapping.insert(record.restaurant_product, master_product);
+        }
+    }
+
+    Ok(mapping)
+}
+
+fn read_product_details(file_path: &str) -> Result<HashMap<usize, ProductDetails>> {
+    let mut details = HashMap::new();
+
+    // Open the csv file and set up the reader
+    let file = File::open(file_path)?;
+    let mut csv_reader = ReaderBuilder::new().has_headers(true).from_reader(file);
+
+    for record in csv_reader.deserialize::<ProductDetails>() {
+        let mut record = record?;
+        record.variant = if record.alcohol > 0 {
+            Some(ProductVariant::Alcohol)
+        } else if record.gluten_free > 0 {
+            Some(ProductVariant::GlutenFree)
+        } else if record.spicy > 0 {
+            Some(ProductVariant::Spicy)
+        } else if record.sugar > 0 {
+            Some(ProductVariant::Sugar)
+        } else if record.vegan > 0 {
+            Some(ProductVariant::Vegan)
+        } else if record.vegetarian > 0 {
+            Some(ProductVariant::Vegetarian)
+        } else if record.halal > 0 {
+            Some(ProductVariant::Halal)
+        } else if record.casherut > 0 {
+            Some(ProductVariant::Casherut)
+        } else {
+            None
+        };
+        details.insert(record.product_id, record);
+    }
+
+    Ok(details)
 }
 
 // Write calculated rankings into the output file
@@ -133,15 +185,32 @@ fn main() {
     let ingredients_proc_handle = std::thread::spawn(|| {
         read_ingredients("data/product_ingredient.csv").expect("to read ingredients csv")
     });
+    let product_mappings_proc_handle = std::thread::spawn(|| {
+        read_product_mappings("data/product_mapping.csv").expect("to read mappings csv")
+    });
+    let product_details_proc_handle = std::thread::spawn(|| {
+        read_product_details("data/product_detail.csv").expect("to read details csv")
+    });
 
     // Wait for the threads to finish calculating...
-    let (product_views, product_image_views, category_views, ingredients) = (
+    let (
+        product_views,
+        product_image_views,
+        category_views,
+        ingredients,
+        product_mappings,
+        product_details,
+    ) = (
         product_proc_handle.join().expect("to process products"),
         product_image_proc_handle
             .join()
             .expect("to process product images"),
         category_proc_handle.join().expect("to process categories"),
         ingredients_proc_handle.join().expect("to read ingredients"),
+        product_mappings_proc_handle
+            .join()
+            .expect("to read mappings"),
+        product_details_proc_handle.join().expect("to read details"),
     );
 
     let mut rankings: Vec<Ranking> = Vec::with_capacity(100_000);
@@ -152,22 +221,43 @@ fn main() {
         let image_views = product_image_views.get(user).unwrap_or(&empty_map);
         let category_views = category_views.get(user).unwrap_or(&empty_map);
 
-        // Calculate ingredients' views for this user
+        // Holds the total view duration for each ingredient
         let mut ingredients_views: HashMap<usize, Duration> = HashMap::new();
+
+        // Holds the total view duration for each variant
+        let mut variants_views: HashMap<ProductVariant, Duration> = HashMap::new();
 
         // Iterate on the products views of that user...
         for (product, &product_view) in product_views.iter() {
-            let Some(product_ingredients) =
-                ingredients.get(&product.product_id.expect("to have product_id"))
-            else {
+            let product_id = product.product_id.expect("to have product_id");
+            let master_product_id = product_mappings.get(&product_id);
+
+            let Some(product_ingredients) = ingredients.get(&product_id) else {
                 continue;
             };
 
+            // Update the view duration for each ingredient
             product_ingredients.iter().for_each(|ingredient_id| {
                 let ingredient_entry = ingredients_views.entry(*ingredient_id).or_default();
                 *ingredient_entry += product_view;
             });
+
+            // Update the view duration for this product's variant
+            if let Some(master_product_id) = master_product_id {
+                let details = product_details.get(master_product_id).cloned();
+                if let Some(details) = details {
+                    if let Some(variant) = details.variant {
+                        let variant_entry = variants_views.entry(variant).or_default();
+                        *variant_entry += product_view;
+                    }
+                }
+            }
         }
+
+        let total_variants_view: usize = variants_views
+            .values()
+            .map(|d| d.num_seconds() as usize)
+            .sum();
 
         // Iterate on the products views of that user...
         for (product, &product_view) in product_views.iter() {
@@ -208,10 +298,31 @@ fn main() {
                 0
             };
 
+            // Calculate the product's variant weight
+            let variant_weight: f32 = {
+                let master_product_id = product_mappings.get(&product_id);
+                if let Some(master_product_id) = master_product_id {
+                    let details = product_details.get(master_product_id).cloned();
+                    if let Some(details) = details {
+                        if let Some(variant) = details.variant {
+                            let variant_duration =
+                                variants_views.get(&variant).cloned().unwrap_or_default();
+                            (variant_duration.num_seconds() as f32) / (total_variants_view as f32)
+                        } else {
+                            0f32
+                        }
+                    } else {
+                        0f32
+                    }
+                } else {
+                    0f32
+                }
+            };
+
             // Calculate the ranking
             let rank = 5 * image_view.num_seconds()
-                + 1 * product_view.num_seconds()
-                + (0.1 * (category_view.num_seconds()) as f32) as i64
+                + ((1f32 + variant_weight) * product_view.num_seconds() as f32) as i64
+                + (0.1 * category_view.num_seconds() as f32) as i64
                 + ingredient_ranking;
 
             rankings.push(Ranking {

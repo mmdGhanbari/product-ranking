@@ -47,6 +47,42 @@ pub struct ProductIngredient {
     pub ingredient_id: usize,
 }
 
+#[derive(Clone, Debug, Deserialize)]
+pub struct ProductMapping {
+    #[serde(alias = "id")]
+    pub restaurant_product: usize,
+    #[serde(alias = "id_product")]
+    pub master_product: Option<usize>,
+}
+
+#[derive(Clone, Debug, Eq, PartialEq, Hash)]
+pub enum ProductVariant {
+    Alcohol,
+    GlutenFree,
+    Spicy,
+    Sugar,
+    Vegan,
+    Vegetarian,
+    Halal,
+    Casherut,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+pub struct ProductDetails {
+    #[serde(alias = "id")]
+    pub product_id: usize,
+    pub alcohol: u8,
+    pub gluten_free: u8,
+    pub spicy: u8,
+    pub sugar: u8,
+    pub vegan: u8,
+    pub vegetarian: u8,
+    pub halal: u8,
+    pub casherut: u8,
+    #[serde(skip)]
+    pub variant: Option<ProductVariant>,
+}
+
 #[derive(Debug)]
 pub struct Ranking {
     pub user: User,
