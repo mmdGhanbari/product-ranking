@@ -128,25 +128,23 @@ fn read_product_details(file_path: &str) -> Result<HashMap<usize, ProductDetails
 
     for record in csv_reader.deserialize::<ProductDetails>() {
         let mut record = record?;
-        record.variant = if record.alcohol > 0 {
-            Some(ProductVariant::Alcohol)
+        if record.alcohol > 0 {
+            record.variants.push(ProductVariant::Alcohol);
         } else if record.gluten_free > 0 {
-            Some(ProductVariant::GlutenFree)
+            record.variants.push(ProductVariant::GlutenFree);
         } else if record.spicy > 0 {
-            Some(ProductVariant::Spicy)
+            record.variants.push(ProductVariant::Spicy);
         } else if record.sugar > 0 {
-            Some(ProductVariant::Sugar)
+            record.variants.push(ProductVariant::Sugar);
         } else if record.vegan > 0 {
-            Some(ProductVariant::Vegan)
+            record.variants.push(ProductVariant::Vegan);
         } else if record.vegetarian > 0 {
-            Some(ProductVariant::Vegetarian)
+            record.variants.push(ProductVariant::Vegetarian);
         } else if record.halal > 0 {
-            Some(ProductVariant::Halal)
+            record.variants.push(ProductVariant::Halal);
         } else if record.casherut > 0 {
-            Some(ProductVariant::Casherut)
-        } else {
-            None
-        };
+            record.variants.push(ProductVariant::Casherut);
+        }
         details.insert(record.product_id, record);
     }
 
@@ -242,14 +240,14 @@ fn main() {
                 *ingredient_entry += product_view;
             });
 
-            // Update the view duration for this product's variant
-            if let Some(master_product_id) = master_product_id {
-                let details = product_details.get(master_product_id).cloned();
-                if let Some(details) = details {
-                    if let Some(variant) = details.variant {
-                        let variant_entry = variants_views.entry(variant).or_default();
-                        *variant_entry += product_view;
-                    }
+            // Update the view duration for this product's variants
+            if let Some(variants) = master_product_id
+                .and_then(|master_product_id| product_details.get(master_product_id))
+                .map(|details| details.variants.clone())
+            {
+                for variant in variants {
+                    let variant_entry = variants_views.entry(variant).or_default();
+                    *variant_entry += product_view;
                 }
             }
         }
@@ -298,22 +296,21 @@ fn main() {
                 0
             };
 
-            // Calculate the product's variant weight
-            let variant_weight: f32 = {
+            // Calculate the product's variants weight
+            let variants_weight: f32 = {
                 let master_product_id = product_mappings.get(&product_id);
-                if let Some(master_product_id) = master_product_id {
-                    let details = product_details.get(master_product_id).cloned();
-                    if let Some(details) = details {
-                        if let Some(variant) = details.variant {
+                if let Some(variants) = master_product_id
+                    .and_then(|master_product_id| product_details.get(master_product_id))
+                    .map(|details| &details.variants)
+                {
+                    variants
+                        .iter()
+                        .map(|variant| {
                             let variant_duration =
                                 variants_views.get(&variant).cloned().unwrap_or_default();
                             (variant_duration.num_seconds() as f32) / (total_variants_view as f32)
-                        } else {
-                            0f32
-                        }
-                    } else {
-                        0f32
-                    }
+                        })
+                        .sum()
                 } else {
                     0f32
                 }
@@ -321,7 +318,7 @@ fn main() {
 
             // Calculate the ranking
             let rank = 5 * image_view.num_seconds()
-                + ((1f32 + variant_weight) * product_view.num_seconds() as f32) as i64
+                + ((1f32 + variants_weight) * product_view.num_seconds() as f32) as i64
                 + (0.1 * category_view.num_seconds() as f32) as i64
                 + ingredient_ranking;
 

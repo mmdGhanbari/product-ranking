@@ -80,7 +80,7 @@ pub struct ProductDetails {
     pub halal: u8,
     pub casherut: u8,
     #[serde(skip)]
-    pub variant: Option<ProductVariant>,
+    pub variants: Vec<ProductVariant>,
 }
 
 #[derive(Debug)]
