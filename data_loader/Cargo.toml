@@ -1,0 +1,15 @@
+[package]
+name = "data_loader"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+csv = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+#mysqlclient-sys = { version = "0.4", features = ["bundled"] }
+diesel = { version = "2.2.4", features = ["mysql", "chrono"] }
+diesel-async = { version = "0.5.0", features = ["mysql"] }
+rev_buf_reader = "0.3.0"
+itertools = "0.13.0"

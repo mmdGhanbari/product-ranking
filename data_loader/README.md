@@ -1,0 +1,2 @@
+export MYSQLCLIENT_VERSION=9.0.1-1  
+export MYSQLCLIENT_LIB_DIR=/usr/lib/

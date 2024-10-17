@@ -1,12 +1,24 @@
+[workspace]
+resolver = "2"
+members = [".", "data_loader"]
+package.edition = "2021"
+
+[workspace.dependencies]
+serde = { version = "1.0.196", features = ["derive"] }
+csv = { version = "1.3.0" }
+anyhow = { version = "1.0.79" }
+tokio = { version = "1", features = ["full"] }
+
 [package]
 name = "ranking"
 version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition.workspace = true
 
 [dependencies]
-serde = { version = "1.0.196", features = ["derive"] }
+data_loader = { path = "data_loader" }
+
+serde = { workspace = true }
+csv = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
 chrono = { version = "0.4.34", features = ["serde"] }
-csv = { version = "1.3.0" }
-anyhow = { version = "1.0.79" }
